@@ -402,7 +402,10 @@ class TVDB
       id: tvShow.id,
       genre: tvShow.Genre,
       language: tvShow.Language,
-      name: tvShow.SeriesName
+      name: tvShow.SeriesName,
+      fanart: tvShow.fanart,
+      poster: tvShow.poster,
+      banner: tvShow.banner
 
     formattedTvShow.firstAired = new Date(tvShow.FirstAired) if tvShow.FirstAired?
 
@@ -424,7 +427,8 @@ class TVDB
       season: episode.SeasonNumber
       seasonId: episode.seasonid,
       tvShowId: episode.seriesid,
-      lastUpdated: episode.lastupdated
+      lastUpdated: episode.lastupdated,
+      filename: episode.filename
 
     formattedEpisode.firstAired = new Date(episode.FirstAired) if episode.FirstAired?
 
